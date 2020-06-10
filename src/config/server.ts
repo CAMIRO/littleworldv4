@@ -14,13 +14,6 @@ app.use(
       graphiql: true,
     }),
 );
-  
-// app.listen(4000);
-
-// app.use("*",(req, res) =>{
-//     res.send("<h1>Welcome to your simple server! Awesome right</h1>");
-// });
-
 
 app.use(express.static('public'));
 
