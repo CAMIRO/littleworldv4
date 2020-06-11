@@ -1,14 +1,26 @@
 import React from 'react';
 import {Button } from 'react-bootstrap'
-import './App.css';
+import styled from "styled-components"
+import { AppNavBar } from './components/appNavBar';
 
-function App() {
+
+
+const App: React.FC = () => {
     return (
-        <div className="App">
-            <h1>Little World</h1>
-            <Button onClick={() => console.log('gegege')}>Hello</Button>
-        </div>
+        <Wrapper>
+           <AppNavBar/>
+        </Wrapper>
+      
+
     );
 }
+const Wrapper = styled.div`
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  flex-direction: row;
+  position: absolute;
+`;
 
 export default App;
