@@ -6,6 +6,9 @@ import styled from 'styled-components';
 import { Footer } from './components/footer';
 // Views
 import { Home } from './views/home';
+import { Desserts } from './views/desserts';
+// sub Views
+import { DetailDessert } from './views/desserts/components/detailDesserts';
 
 export const Routes: React.FC = () => {
     useEffect(() => {
@@ -20,8 +23,8 @@ export const Routes: React.FC = () => {
                 <Switch>
                     <Route path="/dishes" />
                     <Route path="/contact" />
-                    <Route path={'/desserts/:dessertId'} />
-                    <Route path="/desserts" />
+                    <Route path={'/desserts/:dessertId'} component={DetailDessert} />
+                    <Route path="/desserts" component={Desserts} />
                     <Route exact path="/" component={Home} />
                 </Switch>
             </BodyWrapper>
