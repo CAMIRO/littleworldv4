@@ -12,11 +12,15 @@ export const AppNavBar: React.FC = () => (
                             <Logo src="/logo.png" alt="Logo" />
                         </StyledLink>
                     </LI>
+                    <LI>
+                        <StyledLink to="/desserts">desserts</StyledLink>
+                    </LI>
                 </ul>
             </Nav>
         </MenuContainer>
     </Wrapper>
 );
+
 const Wrapper = styled.div`
     width: 96px;
     min-width: 98px;

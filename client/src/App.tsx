@@ -1,12 +1,13 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import styled from 'styled-components';
 import { AppNavBar } from './components/appNavBar';
+import { Routes } from './routes';
 
 const App: React.FC = () => {
     return (
         <Wrapper>
             <AppNavBar />
+            <Routes />
         </Wrapper>
     );
 };
