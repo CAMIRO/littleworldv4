@@ -13,7 +13,7 @@ export const AppNavBar: React.FC = () => (
                         </StyledLink>
                     </LI>
                     <LI>
-                        <StyledLink to="/desserts">desserts</StyledLink>
+                        <StyledLink to="/desserts">Desserts</StyledLink>
                     </LI>
                 </ul>
             </Nav>

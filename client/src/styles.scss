@@ -1,0 +1,14 @@
+$cyan: #68c3c8 !default;
+$primary: $cyan !default;
+$blue: #007bff !default;
+$link-color: $blue !default;
+$component-active-bg: $cyan !default;
+$custom-control-indicator-checked-disabled-bg: rgba($blue, 0.5) !default;
+$progress-bar-bg: $blue !default;
+$gray-200: #e9ecef !default;
+$gray-100: #f8f9fa !default;
+$light: $gray-200 !default;
+$secondary: $gray-200 !default;
+
+@import "bootstrap/scss/bootstrap.scss";
+
