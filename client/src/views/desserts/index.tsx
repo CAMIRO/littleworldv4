@@ -6,10 +6,10 @@ import { useHistory } from 'react-router-dom';
 import { ImageCard } from './components/ImgCard';
 
 const ImageCardArr = [
-    { id: 1, title: 'title 1', img: 'https://picsum.photos/150/150?text=First' },
-    { id: 2, title: 'title 2', img: 'https://picsum.photos/150/150?text=First' },
-    { id: 3, title: 'title 3', img: 'https://picsum.photos/150/150?text=First' },
-    { id: 4, title: 'title 4', img: 'https://picsum.photos/150/150?text=First' },
+    { id: 1, title: 'title 1', img: '/images/desserts/item1.jpg' },
+    { id: 2, title: 'title 2', img: '/images/desserts/item2.jpg' },
+    { id: 3, title: 'title 3', img: '/images/desserts/item3.jpg' },
+    { id: 4, title: 'title 4', img: '/images/desserts/item4.jpg' },
 ];
 
 export const Desserts: React.FC = () => {

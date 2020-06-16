@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://picsum.photos/800/250?text=First slide&bg=373940"
+                            src="/images/banner/background.jpg"
                             alt="First slide"
                         />
 
@@ -38,7 +38,7 @@ export const Home: React.FC = () => {
                     <Carousel.Item>
                         <img
                             className="d-block w-100"
-                            src="https://picsum.photos/800/250?text=First slide&bg=373940"
+                            src="/images/banner/background.jpg"
                             alt="First slide"
                         />
 
@@ -48,19 +48,7 @@ export const Home: React.FC = () => {
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="https://picsum.photos/800/250?text=First slide&bg=373940"
-                            alt="First slide"
-                        />
-
-                        <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            {mainCTAButton(3)}
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
+                    
                 </Carousel>
             </Content>
         </Wrapper>

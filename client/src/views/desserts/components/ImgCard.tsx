@@ -12,7 +12,7 @@ export const ImageCard: React.FC<ImageCardProps> = ({ cardImgLink, cardTitle, ha
     return (
         <MyCol sm={3}>
             <MyCard onClick={handleOnClick} className="text-white" style={{ width: '100%' }}>
-                <Card.Img variant="top" src={`${cardImgLink} cap`} />
+                <Card.Img variant="top" src={cardImgLink} />
                 <Card.ImgOverlay className="column justify-content-end">
                     <Card.Title>{cardTitle}</Card.Title>
                 </Card.ImgOverlay>
