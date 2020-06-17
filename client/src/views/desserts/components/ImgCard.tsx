@@ -30,3 +30,4 @@ const MyCard = styled(Card)`
         box-shadow: 0 5px 14px rgba(0, 0, 0, 0.4);
     }
 `;
+    

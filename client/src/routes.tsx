@@ -8,7 +8,7 @@ import { Footer } from './components/footer';
 import { Home } from './views/home';
 import { Desserts } from './views/desserts';
 // sub Views
-import { DetailDessert } from './views/desserts/components/detailDesserts';
+import { DetailDessert } from './views/desserts/detailDesserts';
 
 export const Routes: React.FC = () => {
     useEffect(() => {
