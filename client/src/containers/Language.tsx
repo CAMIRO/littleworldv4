@@ -1,6 +1,8 @@
 import React, { useState, createContext, useContext } from 'react'
 import { languageOptions, dictionaryList } from '../languages';
 
+const [language, setLanguage] = useState('');
+
 type GenericObject = { [key: string]: any };
 
 interface ContextType {
@@ -17,13 +19,13 @@ export const LanguageContext = createContext<ContextType>({
 // it provides the language context to app
 export function LanguageProvider({ children }: any) {
     const languageContext = useContext(LanguageContext);
-    const [language, setLanguage] = useState(languageContext.language);
+    
     const [dictionary, setDictionary] = useState(languageContext.dictionary);
-
+    setLanguage(languageContext.language);
     const provider = {
         language,
         dictionary,
-        setLanguage: (selectedLanguage: GenericObject) => {
+        setLanguage: (selectedLanguage: string | any) => {
             setLanguage(selectedLanguage); // it will update the language in state
             setDictionary(dictionaryList[selectedLanguage.id]);
         }
