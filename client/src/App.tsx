@@ -5,10 +5,10 @@ import { Routes } from './routes';
 
 const App: React.FC = () => {
     return (
-        <Wrapper>
-            <AppNavBar />
-            <Routes />
-        </Wrapper>
+            <Wrapper>
+                <AppNavBar/>
+                <Routes/>
+            </Wrapper>
     );
 };
 const Wrapper = styled.div`
