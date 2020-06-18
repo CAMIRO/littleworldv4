@@ -2,7 +2,6 @@ import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import styled from 'styled-components';
-import LanguageSelector from '../components/languageSelector'; 
 
 export const Home: React.FC = () => {
     const mainCTAButton = (id: number) => {
@@ -22,14 +21,9 @@ export const Home: React.FC = () => {
     return (
         <Wrapper>
             <Content>
-                <LanguageSelector />
                 <Carousel>
                     <Carousel.Item>
-                        <img 
-                            className="d-block w-100"
-                            src="/images/banner/background.jpg"
-                            alt="First slide"
-                         />
+                        <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             {mainCTAButton(1)}
@@ -37,11 +31,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img 
-                            className="d-block w-100"
-                            src="/images/banner/background.jpg"
-                            alt="First slide"
-                        />
+                        <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
                         <Carousel.Caption>
                             <h3>second slide label</h3>
                             {mainCTAButton(2)}

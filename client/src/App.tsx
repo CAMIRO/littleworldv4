@@ -3,12 +3,17 @@ import styled from 'styled-components';
 import { AppNavBar } from './components/appNavBar';
 import { Routes } from './routes';
 
+//
+import { Provider } from './store/state';
+
 const App: React.FC = () => {
     return (
+        <Provider>
             <Wrapper>
-                <AppNavBar/>
-                <Routes/>
+                <AppNavBar />
+                <Routes />
             </Wrapper>
+        </Provider>
     );
 };
 const Wrapper = styled.div`
