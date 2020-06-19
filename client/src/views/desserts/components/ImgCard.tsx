@@ -5,7 +5,7 @@ import { Card, Col } from 'react-bootstrap';
 interface ImageCardProps {
     cardTitle: string;
     cardImgLink: string;
-    id: number;
+    id: string;
     handleOnClick: () => void;
 }
 export const ImageCard: React.FC<ImageCardProps> = ({ cardImgLink, cardTitle, handleOnClick }) => {
