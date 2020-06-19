@@ -2,8 +2,12 @@ import React from 'react';
 import { Carousel, Button } from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import styled from 'styled-components';
+// Language
+import { useTranslation } from 'react-i18next';
 
 export const Home: React.FC = () => {
+    const { t } = useTranslation()
+
     const mainCTAButton = (id: number) => {
         const clickHandler = () => {
             ReactGA.event({
@@ -13,7 +17,7 @@ export const Home: React.FC = () => {
         };
         return (
             <Button variant="danger" onClick={clickHandler}>
-                CTA
+                {t('home.1')}
             </Button>
         );
     };

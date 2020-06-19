@@ -9,6 +9,8 @@ import { Home } from './views/home';
 import { Desserts } from './views/desserts';
 // sub Views
 import { DetailDessert } from './views/desserts/detailDesserts';
+// Language
+import { LanguageSelector } from './language/languageSelector';
 
 export const Routes: React.FC = () => {
     useEffect(() => {
@@ -20,6 +22,7 @@ export const Routes: React.FC = () => {
     return (
         <Wrapper>
             <BodyWrapper>
+            <LanguageSelector/>
                 <Switch>
                     <Route path="/dishes" />
                     <Route path="/contact" />
