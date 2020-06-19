@@ -24,7 +24,6 @@ export const Home: React.FC = () => {
                 <Carousel>
                     <Carousel.Item>
                         <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
-
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             {mainCTAButton(1)}
@@ -33,7 +32,6 @@ export const Home: React.FC = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
-
                         <Carousel.Caption>
                             <h3>second slide label</h3>
                             {mainCTAButton(2)}
