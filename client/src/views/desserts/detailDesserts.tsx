@@ -3,11 +3,27 @@ import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 import { Row, Container, Col, Carousel, Table, Button } from 'react-bootstrap';
 import { ShoppingBag } from 'react-feather';
+// Language
+import { useTranslation } from 'react-i18next';
+
+const ImageCardArr = [
+    {
+        id: '1-DST-MEE-SML',
+        title: 'Meringue lollipop',
+        img11: '/images/desserts/item1/item11.jpg',
+        img12: '/images/desserts/item1/item12.jpg',
+        img13: '/images/desserts/item1/item13.jpg',
+        img14: '/images/desserts/item1/item14.jpg',
+    },
+    { id: '2-DST-PKE-MID', title: '棒棒糖蛋糕 Pop cake', img21: '/images/desserts/item2/item21.jpg' },
+    { id: '3-DST-MDN-SML', title: '甜甜圈型收涎蛋糕 Mini donuts cake', img31: '/images/desserts/item3/item31.jpg' },
+    { id: '4-DST-CKE-LRG', title: '新鲜奶油夹心蛋糕 Mills craps cake', img41: '/images/desserts/item4/item41.jpg' },
+];
 
 export const DetailDessert: React.FC = () => {
     const { dessertId } = useParams();
-
     const ItemNumber = dessertId.charAt(0);
+    const { t } = useTranslation();
 
     return (
         <Wrapper>
@@ -39,7 +55,7 @@ export const DetailDessert: React.FC = () => {
                                 </Carousel.Item>
                             </Carousel>
                             <MYDivDescription>
-                                <h4>Ingredients</h4>
+                                <h4>{t('detailDesserts.ingredients')}</h4>
                                 <p>
                                     flour, lukewarm water, yeast, raisins, cranberries, citrus peel (chopped), nuts,
                                     rum, sugar, salt, ground cinnamon, eggs, butter, marzipan, butter (melted and
@@ -48,14 +64,16 @@ export const DetailDessert: React.FC = () => {
                             </MYDivDescription>
                         </MyCol>
                         <MyCol>
-                            <h2>Dessert Title</h2>
-                            <p>CODE: {dessertId}</p>
+                            <h2>{t(`detailDesserts.item${ItemNumber}.title`)}</h2>
+                            <p>
+                                {t('detailDesserts.code')}: {dessertId}
+                            </p>
                             <Table striped bordered hover>
                                 <thead>
                                     <tr>
-                                        <th>Units</th>
-                                        <th>Discount</th>
-                                        <th>Price</th>
+                                        <th>{t('detailDesserts.quantity')}</th>
+                                        <th>{t('detailDesserts.discount')}</th>
+                                        <th>{t('detailDesserts.price')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -80,11 +98,10 @@ export const DetailDessert: React.FC = () => {
                                     window.location.href = `mailto: littleworld0326@gmail.com?subject=ORDER:%20${dessertId}`;
                                 }}
                             >
-                                ORDER NOW <ShoppingBag color="#FFF" size={19} />
+                                {t('detailDesserts.order_now')} <ShoppingBag color="#FFF" size={19} />
                             </Button>
-
                             <MYDivDescription>
-                                <h4>Description</h4>
+                                <h4>{t('detailDesserts.product_description')}</h4>
                                 <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industry standard dummy text ever since the 1500s, when an

@@ -2,14 +2,19 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Facebook, Instagram, Youtube } from 'react-feather';
+// Language
+import { useTranslation } from 'react-i18next';
+
 export const Footer: React.FC = () => {
     const date = new Date();
     const currentYear = date.getFullYear();
+    const { t } = useTranslation();
+
     return (
         <MyContainer fluid>
             <MyRow className="justify-content-md-center align-items-center">
                 <MyCol sm={8}>
-                    For custom order requests, questions, or just to get in touch please email{' '}
+                    {t('footer.concerns')}
                     <Atag href="mailto: littleworld0326@gmail.com">littleworld0326@gmail.com</Atag>
                 </MyCol>
 

@@ -20,6 +20,7 @@ export const Desserts: React.FC = () => {
         const url = `/desserts/${id}`;
         history.push(url);
     }, []);
+
     const CardComponent = () =>
         ImageCardArr.map((card) => (
             <ImageCard
