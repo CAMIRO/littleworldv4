@@ -9,7 +9,6 @@ import { useTranslation } from 'react-i18next';
 export const Home: React.FC = () => {
     const history = useHistory();
     const { t } = useTranslation();
-    
 
     const mainCTAButton = (id: number) => {
         const clickHandler = () => {
@@ -17,8 +16,7 @@ export const Home: React.FC = () => {
                 category: 'Button',
                 action: `mainCTA clicked id: ${id}`,
             });
-            id == 1 ?  history.push("/desserts/3-DST-MDN-SML") : history.push("/desserts/2-DST-PKE-MID");
-          
+            id == 1 ? history.push('/desserts/3-DST-MDN-SML') : history.push('/desserts/2-DST-PKE-MID');
         };
         return (
             <Button variant="danger" onClick={clickHandler}>

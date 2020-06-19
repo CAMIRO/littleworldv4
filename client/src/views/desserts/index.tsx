@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom';
 // subComponents
 import { ImageCard } from './components/ImgCard';
 
-
 // ID : [ 1.NUMBER 2.PRODUCT TYPE: DESSERT - FAST FOOD | 3. PRODUCT | 4.SIZE ]
 const ImageCardArr = [
     { id: '1-DST-MEE-SML', title: 'title 1', img: '/images/desserts/item1/item1.jpg' },

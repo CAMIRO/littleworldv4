@@ -6,8 +6,8 @@ import { ShoppingBag } from 'react-feather';
 
 export const DetailDessert: React.FC = () => {
     const { dessertId } = useParams();
-    
-    let ItemNumber = dessertId.charAt(0)
+
+    const ItemNumber = dessertId.charAt(0);
 
     return (
         <Wrapper>
