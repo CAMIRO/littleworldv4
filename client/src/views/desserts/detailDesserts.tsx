@@ -6,6 +6,8 @@ import { ShoppingBag } from 'react-feather';
 
 export const DetailDessert: React.FC = () => {
     const { dessertId } = useParams();
+    
+    let ItemNumber = dessertId.charAt(0)
 
     return (
         <Wrapper>
@@ -17,21 +19,21 @@ export const DetailDessert: React.FC = () => {
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://picsum.photos/800/400?text=First slide&bg=373940"
+                                        src={`/images/desserts/item${ItemNumber}/item${ItemNumber}1.jpg`}
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://picsum.photos/800/400?text=First slide&bg=373940"
+                                        src={`/images/desserts/item${ItemNumber}/item${ItemNumber}2.jpg`}
                                         alt="First slide"
                                     />
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
                                         className="d-block w-100"
-                                        src="https://picsum.photos/800/400?text=First slide&bg=373940"
+                                        src={`/images/desserts/item${ItemNumber}/item${ItemNumber}3.jpg`}
                                         alt="First slide"
                                     />
                                 </Carousel.Item>

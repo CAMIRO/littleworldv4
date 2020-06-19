@@ -5,13 +5,13 @@ import { useHistory } from 'react-router-dom';
 // subComponents
 import { ImageCard } from './components/ImgCard';
 
-// ID : [ 1.PRODUCT TYPE: DESSERT - FAST FOOD | 2. PRODUCT | 3.SIZE ]
 
+// ID : [ 1.NUMBER 2.PRODUCT TYPE: DESSERT - FAST FOOD | 3. PRODUCT | 4.SIZE ]
 const ImageCardArr = [
-    { id: 'DST-MEE-SML', title: 'title 1', img: '/images/desserts/item1.jpg' },
-    { id: 'DST-PKE-MID', title: 'title 2', img: '/images/desserts/item2.jpg' },
-    { id: 'DST-MDN-SML', title: 'title 3', img: '/images/desserts/item3.jpg' },
-    { id: 'DST-CKE-LRG', title: 'title 4', img: '/images/desserts/item4.jpg' },
+    { id: '1-DST-MEE-SML', title: 'title 1', img: '/images/desserts/item1/item1.jpg' },
+    { id: '2-DST-PKE-MID', title: 'title 2', img: '/images/desserts/item2/item2.jpg' },
+    { id: '3-DST-MDN-SML', title: 'title 3', img: '/images/desserts/item3/item3.jpg' },
+    { id: '4-DST-CKE-LRG', title: 'title 4', img: '/images/desserts/item4/item4.jpg' },
 ];
 
 export const Desserts: React.FC = () => {
