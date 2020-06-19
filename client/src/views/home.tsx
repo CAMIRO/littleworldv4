@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
         };
         return (
             <Button variant="danger" onClick={clickHandler}>
-                {t('home.1')}
+                {t('home.2')}
             </Button>
         );
     };
@@ -27,19 +27,19 @@ export const Home: React.FC = () => {
             <Content>
                 <Carousel>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
+                        <img className="d-block w-100" src="/images/banner/banner1.jpg" alt="First slide" />
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
+                            <h3>{t('home.1')}</h3>
                             {mainCTAButton(1)}
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <p>{t('home.3')}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/background.jpg" alt="First slide" />
+                        <img className="d-block w-100" src="/images/banner/banner2.jpg" alt="First slide" />
                         <Carousel.Caption>
-                            <h3>second slide label</h3>
+                            <h3>{t('home.11')}</h3>
                             {mainCTAButton(2)}
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <p>{t('home.31')}</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
