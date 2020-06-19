@@ -5,7 +5,6 @@ import { Routes } from './routes';
 // global state
 import { Provider } from './store/state';
 
-
 const App: React.FC = () => {
     return (
         <Provider>

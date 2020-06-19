@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 
 export const Home: React.FC = () => {
-    const { t } = useTranslation()
+    const { t } = useTranslation();
 
     const mainCTAButton = (id: number) => {
         const clickHandler = () => {

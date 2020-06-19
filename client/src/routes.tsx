@@ -22,7 +22,7 @@ export const Routes: React.FC = () => {
     return (
         <Wrapper>
             <BodyWrapper>
-            <LanguageSelector/>
+                <LanguageSelector />
                 <Switch>
                     <Route path="/dishes" />
                     <Route path="/contact" />
