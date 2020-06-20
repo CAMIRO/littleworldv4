@@ -19,7 +19,7 @@ export const Home: React.FC = () => {
                 category: 'Button',
                 action: `mainCTA clicked id: ${id}`,
             });
-            id == 1 ? history.push('/desserts/3-DST-MDN-SML') : history.push('/desserts/2-DST-PKE-MID');
+            id === 1 ? history.push('/desserts/3-DST-MDN-SML') : history.push('/desserts/2-DST-PKE-MID');
         };
         return (
             <Button variant="danger" onClick={clickHandler}>
@@ -57,7 +57,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                <Test/>
+                {/* <Test/> */}
             </Content>
         </Wrapper>
     );

@@ -17,7 +17,7 @@ export const Test = () => {
         if (error) return <p>Error :(</p>;
         console.log(data);
       
-        return data.launches.map((launch) => (
+        return data.launches.map((launch: { flight_number: string | number | undefined; mission_name: React.ReactNode; }) => (
           <div key={launch.flight_number}>
             <p>
               {launch.mission_name}

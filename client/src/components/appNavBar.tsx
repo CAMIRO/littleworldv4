@@ -1,25 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+// Language
+import { useTranslation } from 'react-i18next';
 
-export const AppNavBar: React.FC = () => (
-    <Wrapper>
-        <MenuContainer>
-            <Nav>
-                <ul>
-                    <LI>
-                        <StyledLink to="/">
-                            <Logo src="/logo.png" alt="Logo" />
-                        </StyledLink>
-                    </LI>
-                    <LI>
-                        <StyledLink to="/desserts">Desserts</StyledLink>
-                    </LI>
-                </ul>
-            </Nav>
-        </MenuContainer>
-    </Wrapper>
+export const AppNavBar: React.FC = () => {
+    const { t } = useTranslation();
+
+    return (
+        <Wrapper>
+            <MenuContainer>
+                <Nav>
+                    <ul>
+                        <LI>
+                            <StyledLink to="/">
+                                <Logo src="/logo.png" alt="Logo" />
+                            </StyledLink>
+                        </LI>
+                        <LI>
+                            <StyledLink to="/desserts">{t('navBar.desserts')}</StyledLink>
+                        </LI>
+                    </ul>
+                </Nav>
+            </MenuContainer>
+        </Wrapper>
 );
+
+}
 
 const Wrapper = styled.div`
     width: 96px;

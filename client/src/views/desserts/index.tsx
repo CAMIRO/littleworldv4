@@ -19,7 +19,7 @@ export const Desserts: React.FC = () => {
     const handleOnClick = useCallback((id) => {
         const url = `/desserts/${id}`;
         history.push(url);
-    }, []);
+    }, [history]);
 
     const CardComponent = () =>
         ImageCardArr.map((card) => (

@@ -6,20 +6,6 @@ import { ShoppingBag } from 'react-feather';
 // Language
 import { useTranslation } from 'react-i18next';
 
-const ImageCardArr = [
-    {
-        id: '1-DST-MEE-SML',
-        title: 'Meringue lollipop',
-        img11: '/images/desserts/item1/item11.jpg',
-        img12: '/images/desserts/item1/item12.jpg',
-        img13: '/images/desserts/item1/item13.jpg',
-        img14: '/images/desserts/item1/item14.jpg',
-    },
-    { id: '2-DST-PKE-MID', title: '棒棒糖蛋糕 Pop cake', img21: '/images/desserts/item2/item21.jpg' },
-    { id: '3-DST-MDN-SML', title: '甜甜圈型收涎蛋糕 Mini donuts cake', img31: '/images/desserts/item3/item31.jpg' },
-    { id: '4-DST-CKE-LRG', title: '新鲜奶油夹心蛋糕 Mills craps cake', img41: '/images/desserts/item4/item41.jpg' },
-];
-
 export const DetailDessert: React.FC = () => {
     const { dessertId } = useParams();
     const ItemNumber = dessertId.charAt(0);
