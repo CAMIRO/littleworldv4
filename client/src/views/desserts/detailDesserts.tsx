@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { Row, Container, Col, Carousel, Table, Button } from 'react-bootstrap';
+import { Row, Container, Col, Carousel, Table, Button, Modal } from 'react-bootstrap';
 import { ShoppingBag } from 'react-feather';
+// Components
+import { OrderModal } from './components/orderModal';
+
 // Language
 import { useTranslation } from 'react-i18next';
 
 export const DetailDessert: React.FC = () => {
+    const [showFormModal, setShowFormModal] = useState(false);
+    const handleShowFormModal = () => setShowFormModal(!showFormModal);
     const { dessertId } = useParams();
     const ItemNumber = dessertId.charAt(0);
     const { t } = useTranslation();
@@ -79,13 +84,11 @@ export const DetailDessert: React.FC = () => {
                                 block
                                 size="lg"
                                 variant="danger"
-                                onClick={(e: { preventDefault: () => void }) => {
-                                    e.preventDefault();
-                                    window.location.href = `mailto: littleworld0326@gmail.com?subject=ORDER:%20${dessertId}`;
-                                }}
+                                onClick={handleShowFormModal}
                             >
-                                {t('desserts.order_now')} <ShoppingBag color="#FFF" size={19} />
+                               <ShoppingBag color="#FFF" size={20} /> {t('desserts.order_now')} 
                             </Button>
+                           
                             <MYDivDescription>
                                 <h4>{t('desserts.product_description')}</h4>
                                 <p>
@@ -103,6 +106,10 @@ export const DetailDessert: React.FC = () => {
                     </Row>
                 </Container>
             </Content>
+           <OrderModal 
+                showFormModal={showFormModal}
+                handleShowFormModal={handleShowFormModal}
+           /> 
         </Wrapper>
     );
 };
