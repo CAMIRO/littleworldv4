@@ -16,9 +16,11 @@ import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/c
 const client = new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-        uri: 'http://localhost:5000/graphql',
+        uri: '/graphql',
     }),
 });
+
+// Note: when is production switch uri to: /graphql
 // Apollo //
 
 ReactDOM.render(
