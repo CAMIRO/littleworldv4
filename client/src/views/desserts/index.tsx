@@ -26,7 +26,6 @@ export const Desserts: React.FC = () => {
             <ImageCard
                 cardImgLink={card.img}
                 key={card.id}
-                cardTitle={card.title}
                 id={card.id}
                 handleOnClick={() => handleOnClick(card.id)}
             />

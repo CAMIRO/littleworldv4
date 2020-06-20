@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Card, Col } from 'react-bootstrap';
-
+// Language
+import { useTranslation } from 'react-i18next';
 interface ImageCardProps {
-    cardTitle: string;
     cardImgLink: string;
     id: string;
     handleOnClick: () => void;
 }
-export const ImageCard: React.FC<ImageCardProps> = ({ cardImgLink, cardTitle, handleOnClick }) => {
+export const ImageCard: React.FC<ImageCardProps> = ({ id, cardImgLink, handleOnClick }) => {
+    const { t } = useTranslation();
+    const ItemNumber = id.charAt(0); 
     return (
         <MyCol sm={3}>
             <MyCard onClick={handleOnClick} className="text-white" style={{ width: '100%' }}>
                 <Card.Img variant="top" src={cardImgLink} />
                 <Card.ImgOverlay className="column justify-content-end">
-                    <Card.Title>{cardTitle}</Card.Title>
+                    <Card.Title>{t(`desserts.item${ItemNumber}.title`)}</Card.Title>
                 </Card.ImgOverlay>
             </MyCard>
         </MyCol>

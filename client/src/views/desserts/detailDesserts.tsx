@@ -55,7 +55,7 @@ export const DetailDessert: React.FC = () => {
                                 </Carousel.Item>
                             </Carousel>
                             <MYDivDescription>
-                                <h4>{t('detailDesserts.ingredients')}</h4>
+                                <h4>{t('desserts.ingredients')}</h4>
                                 <p>
                                     flour, lukewarm water, yeast, raisins, cranberries, citrus peel (chopped), nuts,
                                     rum, sugar, salt, ground cinnamon, eggs, butter, marzipan, butter (melted and
@@ -64,16 +64,16 @@ export const DetailDessert: React.FC = () => {
                             </MYDivDescription>
                         </MyCol>
                         <MyCol>
-                            <h2>{t(`detailDesserts.item${ItemNumber}.title`)}</h2>
+                            <h2>{t(`desserts.item${ItemNumber}.title`)}</h2>
                             <p>
-                                {t('detailDesserts.code')}: {dessertId}
+                                {t('desserts.code')}: {dessertId}
                             </p>
                             <Table striped bordered hover>
                                 <thead>
                                     <tr>
-                                        <th>{t('detailDesserts.quantity')}</th>
-                                        <th>{t('detailDesserts.discount')}</th>
-                                        <th>{t('detailDesserts.price')}</th>
+                                        <th>{t('desserts.quantity')}</th>
+                                        <th>{t('desserts.discount')}</th>
+                                        <th>{t('desserts.price')}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -98,10 +98,10 @@ export const DetailDessert: React.FC = () => {
                                     window.location.href = `mailto: littleworld0326@gmail.com?subject=ORDER:%20${dessertId}`;
                                 }}
                             >
-                                {t('detailDesserts.order_now')} <ShoppingBag color="#FFF" size={19} />
+                                {t('desserts.order_now')} <ShoppingBag color="#FFF" size={19} />
                             </Button>
                             <MYDivDescription>
-                                <h4>{t('detailDesserts.product_description')}</h4>
+                                <h4>{t('desserts.product_description')}</h4>
                                 <p>
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industry standard dummy text ever since the 1500s, when an

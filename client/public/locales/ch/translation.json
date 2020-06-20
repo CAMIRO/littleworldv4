@@ -7,7 +7,7 @@
         "31": "假如你也有個哆啦A夢，最想得到的道具是哪一個呢？"
 
     },
-    "detailDesserts": {
+    "desserts": {
         "code": "代碼",
         "quantity": "數量",
         "discount": "優惠",
@@ -17,6 +17,15 @@
         "ingredients": "成分",
         "item1": {
             "title": "瑪琳棒棒糖"
+        },
+        "item2": {
+            "title": "棒棒糖蛋糕"
+        },
+        "item3": {
+            "title": "甜甜圈型收涎蛋糕"
+        },
+        "item4": {
+            "title": "新鲜奶油夹心蛋糕"
         }
     },
     "footer": {
