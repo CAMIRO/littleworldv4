@@ -23,12 +23,7 @@ export const Desserts: React.FC = () => {
 
     const CardComponent = () =>
         ImageCardArr.map((card) => (
-            <ImageCard
-                cardImgLink={card.img}
-                key={card.id}
-                id={card.id}
-                handleOnClick={() => handleOnClick(card.id)}
-            />
+            <ImageCard cardImgLink={card.img} key={card.id} id={card.id} handleOnClick={() => handleOnClick(card.id)} />
         ));
 
     return (

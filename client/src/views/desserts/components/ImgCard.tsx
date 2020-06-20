@@ -10,7 +10,7 @@ interface ImageCardProps {
 }
 export const ImageCard: React.FC<ImageCardProps> = ({ id, cardImgLink, handleOnClick }) => {
     const { t } = useTranslation();
-    const ItemNumber = id.charAt(0); 
+    const ItemNumber = id.charAt(0);
     return (
         <MyCol sm={3}>
             <MyCard onClick={handleOnClick} className="text-white" style={{ width: '100%' }}>
