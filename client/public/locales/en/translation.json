@@ -7,6 +7,9 @@
         "31": "If you could have a Doraemon, what'd be the tool you would like to have?"
 
     },
+    "footer": {
+        "concerns": "For custom order requests, questions, or just to get in touch please email "
+    },
     "desserts": {
         "code": "Code",
         "quantity": "Quantity",
@@ -27,8 +30,5 @@
         "item4": {
             "title": "Mills craps cake"
         }
-    },
-    "footer": {
-        "concerns": "For custom order requests, questions, or just to get in touch please email "
     }
 }
