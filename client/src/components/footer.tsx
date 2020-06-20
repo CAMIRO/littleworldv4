@@ -20,18 +20,14 @@ export const Footer: React.FC = () => {
 
                 <MyCol sm={4}>
                     <Row className="justify-content-around align-items-center">
-                        <MyFacebook onClick={() => 
-                                window.open('https://www.facebook.com/littleworld0326', '_blank')
-                            }
-                        />
+                        <MyFacebook onClick={() => window.open('https://www.facebook.com/littleworld0326', '_blank')} />
                         <MyYoutube
                             onClick={() =>
                                 window.open('https://www.youtube.com/channel/UCkmolif0AZiZjE3TYC8PnNA', '_blank')
                             }
                         />
-                        <MyInstagram onClick={() => 
-                                window.open('https://www.instagram.com/littleworld0326/', '_blank')
-                            }
+                        <MyInstagram
+                            onClick={() => window.open('https://www.instagram.com/littleworld0326/', '_blank')}
                         />
                     </Row>
                 </MyCol>

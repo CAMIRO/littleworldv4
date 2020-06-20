@@ -24,9 +24,8 @@ export const AppNavBar: React.FC = () => {
                 </Nav>
             </MenuContainer>
         </Wrapper>
-);
-
-}
+    );
+};
 
 const Wrapper = styled.div`
     width: 96px;

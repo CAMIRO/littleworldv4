@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { AppNavBar } from './components/appNavBar';
 import { Routes } from './routes';
 
-
 const App: React.FC = () => {
     return (
         <Wrapper>

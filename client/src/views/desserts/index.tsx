@@ -16,10 +16,13 @@ const ImageCardArr = [
 export const Desserts: React.FC = () => {
     const history = useHistory();
 
-    const handleOnClick = useCallback((id) => {
-        const url = `/desserts/${id}`;
-        history.push(url);
-    }, [history]);
+    const handleOnClick = useCallback(
+        (id) => {
+            const url = `/desserts/${id}`;
+            history.push(url);
+        },
+        [history],
+    );
 
     const CardComponent = () =>
         ImageCardArr.map((card) => (

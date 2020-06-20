@@ -16,23 +16,20 @@ import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/c
 const client = new ApolloClient({
     cache: new InMemoryCache(),
     link: new HttpLink({
-      uri: 'http://localhost:5000/graphql'
-    })
-  });
-// Apollo // 
-
-
-
+        uri: 'http://localhost:5000/graphql',
+    }),
+});
+// Apollo //
 
 ReactDOM.render(
     <Suspense fallback={<div>Loading...</div>}>
         <ApolloProvider client={client}>
-                <Provider>
-                    <BrowserRouter> 
-                        <App />
-                    </BrowserRouter>
-                    <GlobalStyles />
-                </Provider>
+            <Provider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+                <GlobalStyles />
+            </Provider>
         </ApolloProvider>
     </Suspense>,
     document.getElementById('root'),

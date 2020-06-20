@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 // test
-import { Test } from '../components/test'
+import { Test } from '../components/test';
 
 export const Home: React.FC = () => {
     const history = useHistory();
@@ -33,11 +33,7 @@ export const Home: React.FC = () => {
             <Content>
                 <Carousel>
                     <Carousel.Item>
-                        <img 
-                            className="d-block w-100" 
-                            src="/images/banner/banner1.jpg"
-                            alt="First slide" 
-                        />
+                        <img className="d-block w-100" src="/images/banner/banner1.jpg" alt="First slide" />
                         <Carousel.Caption>
                             <h3>{t('home.1')}</h3>
                             {mainCTAButton(1)}
@@ -45,11 +41,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img 
-                            className="d-block w-100"
-                            src="/images/banner/banner2.jpg"
-                            alt="First slide"
-                        />
+                        <img className="d-block w-100" src="/images/banner/banner2.jpg" alt="First slide" />
                         <Carousel.Caption>
                             <h3>{t('home.11')}</h3>
                             {mainCTAButton(2)}
