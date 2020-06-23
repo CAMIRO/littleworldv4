@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-import { Row, Container, Col, Carousel, Table, Button, Modal } from 'react-bootstrap';
+import { Row, Container, Col, Carousel, Table, Button } from 'react-bootstrap';
 import { ShoppingBag } from 'react-feather';
 // Components
 import { OrderModal } from './components/orderModal';
