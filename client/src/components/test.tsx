@@ -1,5 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
+import { Loading } from './loading'
+
 
 const LAUNCHES_QUERY = gql`
     query LaunchesQuery {
@@ -13,7 +15,7 @@ const LAUNCHES_QUERY = gql`
 export const Test = () => {
     const { loading, error, data } = useQuery(LAUNCHES_QUERY);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Loading/>;
     if (error) return <p>Error :(</p>;
     console.log(data);
 

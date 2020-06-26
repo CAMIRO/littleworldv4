@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { Loading } from './components/loading'
 // Language
 import './language/i18next';
 // Styles
@@ -19,12 +20,10 @@ const client = new ApolloClient({
         uri: '/graphql',
     }),
 });
-
-// Note: when is production switch uri to: /graphql
 // Apollo //
 
 ReactDOM.render(
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loading/>}>
         <ApolloProvider client={client}>
             <Provider>
                 <BrowserRouter>

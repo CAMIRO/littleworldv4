@@ -41,7 +41,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img className="d-block w-100" src="/images/banner/banner2.jpg" alt="First slide" />
+                        <img className="d-block w-100" src="/images/banner/banner2.jpg" alt="Second slide" />
                         <Carousel.Caption>
                             <h3>{t('home.11')}</h3>
                             {mainCTAButton(2)}
@@ -49,7 +49,9 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                {/* <Test/> */}
+                <Test/> 
+
+                
             </Content>
         </Wrapper>
     );
@@ -64,3 +66,5 @@ const Content = styled.div`
     width: 100%;
     overflow: auto;
 `;
+
+
