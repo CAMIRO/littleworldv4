@@ -49,9 +49,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-                <Test/> 
-
-                
+                <Test />
             </Content>
         </Wrapper>
     );
@@ -66,5 +64,3 @@ const Content = styled.div`
     width: 100%;
     overflow: auto;
 `;
-
-

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import { Loading } from './components/loading'
+import { Loading } from './components/loading';
 // Language
 import './language/i18next';
 // Styles
@@ -23,7 +23,7 @@ const client = new ApolloClient({
 // Apollo //
 
 ReactDOM.render(
-    <Suspense fallback={<Loading/>}>
+    <Suspense fallback={<Loading />}>
         <ApolloProvider client={client}>
             <Provider>
                 <BrowserRouter>
