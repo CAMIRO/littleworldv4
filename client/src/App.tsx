@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { AppNavBar } from './components/appNavBar';
+import { AppNavBar } from './components/navBar/appNavBar';
+import { ToggleNavBar } from './components/navBar/toggleNavBar';
 import { Routes } from './routes';
 
 const App: React.FC = () => {
-    const [showNavBar, setShowNavBar] = useState(false)
-    console.log(showNavBar)
+    const [showNavBar, setShowNavBar] = useState(false);
     return (
         <Wrapper>
             <AppNavBar showNavBar={showNavBar} />
-                <MyButtonToggleNavBar onClick={()=> setShowNavBar(!showNavBar)}/>
+            <ToggleNavBar setShowNavBar={setShowNavBar} showNavBar={showNavBar} />
             <Routes />
         </Wrapper>
     );
@@ -22,22 +22,5 @@ const Wrapper = styled.div`
     flex-direction: row;
     position: absolute;
 `;
-
-const MyButtonToggleNavBar = styled.div`
- @media (min-width: 768px){
-        display: none
-    }
-    
-    display: block;
-    height: 20px;
-    width: 20px;
-    background-color: red;
-    position: fixed;
-    z-index: 102;
-    top: 10px;
-    cursor: pointer;
-`
-
-
 
 export default App;
