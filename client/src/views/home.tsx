@@ -31,13 +31,13 @@ export const Home: React.FC = () => {
     return (
         <Wrapper>
             <Content>
-                <Carousel>
+                <Carousel indicators={false}>
                     <Carousel.Item>
                         <img className="d-block w-100" src="/images/banner/banner1.jpg" alt="First slide" />
                         <Carousel.Caption>
                             <h3>{t('home.1')}</h3>
                             {mainCTAButton(1)}
-                            <p>{t('home.3')}</p>
+                            <MyP>{t('home.3')}</MyP>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -45,7 +45,7 @@ export const Home: React.FC = () => {
                         <Carousel.Caption>
                             <h3>{t('home.11')}</h3>
                             {mainCTAButton(2)}
-                            <p>{t('home.31')}</p>
+                            <MyP>{t('home.31')}</MyP>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -63,4 +63,9 @@ const Wrapper = styled.div`
 const Content = styled.div`
     width: 100%;
     overflow: auto;
+`;
+const MyP = styled.p`
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
