@@ -4,11 +4,25 @@ import { Link } from 'react-router-dom';
 // Language
 import { useTranslation } from 'react-i18next';
 
-export const AppNavBar: React.FC = () => {
+interface Props {
+    show: () => string;
+  }
+
+interface AppNavBarProps {
+    showNavBar: boolean 
+}
+
+export const AppNavBar: React.FC<AppNavBarProps> = ({ showNavBar }) => {
     const { t } = useTranslation();
 
+    const onShowToggle = () => {
+        let show = '';
+        showNavBar === false ? show ='none' : show = 'block' 
+        return show
+    }
+
     return (
-        <Wrapper>
+        <Wrapper show={onShowToggle}>
             <MenuContainer>
                 <Nav>
                     <ul>
@@ -27,12 +41,15 @@ export const AppNavBar: React.FC = () => {
     );
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<Props>`
     width: 96px;
     min-width: 98px;
     z-index: 102;
     box-shadow: inset -7px 0px 22px -7px rgba(0, 0, 0, 0.18);
     border-right: 1px solid #e4e4e4;
+    @media (max-width: 768px){
+        display: ${props => props.show}
+    }
 `;
 const MenuContainer = styled.div`
     min-height: 70px;
@@ -76,7 +93,6 @@ const StyledLink = styled(Link)`
     text-align: center;
     width: 100%;
     align-self: center;
-
     &:focus,
     &:hover,
     &:visited,
