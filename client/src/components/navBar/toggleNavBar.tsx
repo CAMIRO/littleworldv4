@@ -5,26 +5,16 @@ import { ArrowRight, ArrowLeft } from 'react-feather';
 
 interface ToggleNavBarProps {
     showNavBar: boolean;
-    setShowNavBar: Dispatch<SetStateAction<boolean>>
-
+    setShowNavBar: Dispatch<SetStateAction<boolean>>;
 }
-
 
 export const ToggleNavBar: React.FC<ToggleNavBarProps> = ({ setShowNavBar, showNavBar }) => {
-    return (
-        <Wrapper onClick={()=> setShowNavBar(!showNavBar)}>
-           {
-               showNavBar ? ( <ArrowLeft />) : ( <ArrowRight />)
-           }
-
-        </Wrapper>
-    )
-}
-
+    return <Wrapper onClick={() => setShowNavBar(!showNavBar)}>{showNavBar ? <ArrowLeft /> : <ArrowRight />}</Wrapper>;
+};
 
 const Wrapper = styled.div`
- @media (min-width: 768px){
-        display: none
+    @media (min-width: 768px) {
+        display: none;
     }
     display: flex;
     height: 20px;
@@ -36,5 +26,5 @@ const Wrapper = styled.div`
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    border-radius: 0  80px  80px 0;
-`
+    border-radius: 0 80px 80px 0;
+`;

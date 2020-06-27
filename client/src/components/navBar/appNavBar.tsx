@@ -6,10 +6,10 @@ import { useTranslation } from 'react-i18next';
 
 interface Props {
     show: () => string;
-  }
+}
 
 interface AppNavBarProps {
-    showNavBar: boolean 
+    showNavBar: boolean;
 }
 
 export const AppNavBar: React.FC<AppNavBarProps> = ({ showNavBar }) => {
@@ -17,9 +17,9 @@ export const AppNavBar: React.FC<AppNavBarProps> = ({ showNavBar }) => {
 
     const onShowToggle = () => {
         let show = '';
-        showNavBar === false ? show ='none' : show = 'block' 
-        return show
-    }
+        showNavBar === false ? (show = 'none') : (show = 'block');
+        return show;
+    };
 
     return (
         <Wrapper show={onShowToggle}>
@@ -47,8 +47,8 @@ const Wrapper = styled.div<Props>`
     z-index: 102;
     box-shadow: inset -7px 0px 22px -7px rgba(0, 0, 0, 0.18);
     border-right: 1px solid #e4e4e4;
-    @media (max-width: 768px){
-        display: ${props => props.show}
+    @media (max-width: 768px) {
+        display: ${(props) => props.show};
     }
 `;
 const MenuContainer = styled.div`

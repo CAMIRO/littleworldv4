@@ -49,7 +49,7 @@ export const Home: React.FC = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
-               {/* <Test />  */}
+                {/* <Test />  */}
             </Content>
         </Wrapper>
     );
