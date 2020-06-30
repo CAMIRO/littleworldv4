@@ -2,27 +2,24 @@ import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { Loading } from './loading';
 
-const LAUNCHES_QUERY = gql`
-    query LaunchesQuery {
-        launches {
-            flight_number
-            mission_name
-            launch_date_local
-        }
+const TEST_QUERY = gql`
+    query TestQuery {
+        helloWorld
     }
 `;
 export const Test = () => {
-    const { loading, error, data } = useQuery(LAUNCHES_QUERY);
+    const { loading, error, data } = useQuery(TEST_QUERY);
 
     if (loading) return <Loading />;
     if (error) return <p>Error :(</p>;
     console.log(data);
 
-    return data.launches.map(
-        (launch: { flight_number: string | number | undefined; mission_name: React.ReactNode }) => (
-            <div key={launch.flight_number}>
-                <p>{launch.mission_name}</p>
-            </div>
-        ),
-    );
+    return ( <div>{data.helloWorld}</div>);
+    // return data.launches.map(
+    //     (launch: { flight_number: string | number | undefined; mission_name: React.ReactNode }) => (
+    //         <div key={launch.flight_number}>
+    //             <p>{launch.mission_name}</p>
+    //         </div>
+    //     ),
+    // );
 };
