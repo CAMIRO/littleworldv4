@@ -1,28 +1,66 @@
-import { Resolver, Mutation, Arg, Query} from 'type-graphql';
+
+import { Resolver, Mutation, Arg, Query, InputType, Field, Int } from 'type-graphql';
 import { Dessert } from '../entity/dessert';
 
-// @InputType()
-// class DessertInput {
-//     @Field()
-//     name!: string;
 
-//     @Field()
-//     ingredients: string;
-// }
+@InputType()
+class DessertInput {
+    @Field()    
+    name!: string
+
+    @Field()  
+    price!: number
+
+    @Field()  
+    ingredients!: string
+    
+    @Field()  
+    description!: string
+}
+
+@InputType()
+class DessertInputUpdate {
+
+    @Field(() => String, { nullable: true})    
+    name?: string
+
+    @Field(() => Int, { nullable: true})  
+    price?: number
+
+    @Field(() => String, { nullable: true})  
+    ingredients?: string
+   
+    @Field(() => String, { nullable: true})  
+    description?: string
+
+}
 
 @Resolver()
  export class DessertResolver {
 
-    @Mutation(() => Boolean)
+    // Add Dessert
+    @Mutation(() => Dessert)
     async createDessert(
-        @Arg("name") name: string,
-        @Arg("price") price: number,
-        @Arg("ingredients") ingredients: string,
-        @Arg("description") description: string,
-
+        @Arg("variables", () => DessertInput) variables: DessertInput,
     ){
-        await Dessert.insert({name, price, ingredients, description})
-        return true;
+        return await Dessert.create(variables).save();
+    }
+    // Delete Dessert
+    @Mutation(() => Boolean)
+    async deleteDessert(@Arg("id", () => Int) id: number){
+        await Dessert.delete(id);
+        return true
+    }
+
+    // Update Dessert
+    @Mutation(()=> Boolean)
+    async updateDessert(
+        @Arg("id", () => Int) id: number, 
+        @Arg("fields", () => DessertInputUpdate) fields: DessertInputUpdate
+    ){
+        await Dessert.update({id}, fields);
+        return true
+
     }
 
     @Query(() => [Dessert])
@@ -31,16 +69,3 @@ import { Dessert } from '../entity/dessert';
     }
 
  }
-
-//     @Mutation(() => Dessert)
-//     async createDessert(
-//         @Arg("variables", () => DessertInput) variables: DessertInput
-//     ){
-//         const newDessert = Dessert.create(variables);
-//         console.log(newDessert);
-//         return await newDessert.save();
-        
-//     }
-
-
-// }
