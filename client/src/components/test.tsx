@@ -4,7 +4,14 @@ import { Loading } from './loading';
 
 const TEST_QUERY = gql`
     query TestQuery {
-        helloWorld
+        getDesserts{
+            id
+            name
+            description
+            ingredients
+            price
+        }
+        
     }
 `;
 export const Test = () => {
@@ -14,7 +21,7 @@ export const Test = () => {
     if (error) return <p>Error :(</p>;
     console.log(data);
 
-    return <div>{data.helloWorld}</div>;
+    return <div>{data.name}</div>;
     // return data.launches.map(
     //     (launch: { flight_number: string | number | undefined; mission_name: React.ReactNode }) => (
     //         <div key={launch.flight_number}>

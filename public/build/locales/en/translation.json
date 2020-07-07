@@ -1,0 +1,37 @@
+{
+    "home": {
+        "1": "Mini donuts cake",
+        "2": "KNOW MORE",
+        "3": "Order donuts with the characters you want!",
+        "11": "Pop cake",
+        "31": "If you could have a Doraemon, what'd be the tool you would like to have?"
+
+    },
+    "navBar": {
+        "desserts": "Desserts"
+    },
+    "footer": {
+        "concerns": "For custom order requests, questions, or just to get in touch please email "
+    },
+    "desserts": {
+        "code": "Code",
+        "quantity": "Quantity",
+        "discount": "Discount",
+        "price": "Price",
+        "order_now": "ORDER NOW",
+        "product_description": "product description",
+        "ingredients": "Ingredients",
+        "item1": {
+            "title": "Meringue lollipop"
+        },
+        "item2": {
+            "title": "Pop cake"
+        },
+        "item3": {
+            "title": "Mini donuts cake"
+        },
+        "item4": {
+            "title": "Mills craps cake"
+        }
+    }
+}

@@ -29,12 +29,13 @@ import "reflect-metadata"
 import { ApolloServer } from 'apollo-server-express';
 import Express from "express"
 import { buildSchema } from 'type-graphql';
-import { LocationResolver } from "../resolvers/location-resolve";
+import { PingResolver } from '../resolvers/ping';
+
 import { createConnection } from "typeorm";
 
 const main = async ()  => {
     const schema = await buildSchema({
-        resolvers: [LocationResolver]
+        resolvers: [PingResolver]
     });
 
     const apolloServer = new ApolloServer({schema})
